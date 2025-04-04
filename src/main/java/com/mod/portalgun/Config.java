@@ -23,12 +23,12 @@ public class Config {
             .define("logDirtBlock", true);
 
     private static final ForgeConfigSpec.IntValue MAGIC_NUMBER = BUILDER
-            .comment("Um número mágico")
+            .comment("Um numero magico")
             .defineInRange("magicNumber", 42, 0, Integer.MAX_VALUE);
 
     public static final ForgeConfigSpec.ConfigValue<String> MAGIC_NUMBER_INTRODUCTION = BUILDER
-            .comment("Mensagem de introdução para o número mágico")
-            .define("magicNumberIntroduction", "O número mágico é... ");
+            .comment("Mensagem de introducao para o número magico")
+            .define("magicNumberIntroduction", "O número magico eh... ");
 
     // Lista de strings tratadas como localizações de recurso para itens
     private static final ForgeConfigSpec.ConfigValue<List<? extends String>> ITEM_STRINGS = BUILDER
