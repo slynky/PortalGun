@@ -10,4 +10,5 @@ public class ModItems {
     //cria o registro em que os items serao registrados
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, PortalGun.MODID);
 
+
 }
