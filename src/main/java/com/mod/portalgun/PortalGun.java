@@ -30,7 +30,7 @@ import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 
 // O valor aqui deve corresponder a uma entrada no arquivo META-INF/mods.toml
-@Mod(PortalGun.MODID)
+@Mod("portalgun")
 public class PortalGun {
     // Definição do ID do mod para referencia em todo o codigo
     public static final String MODID = "PortalGun";
