@@ -1,5 +1,6 @@
 package com.mod.portalgun;
 
+import com.mod.portalgun.registry.ModRegistries;
 import com.mod.portalgun.registry.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -33,7 +34,7 @@ import org.slf4j.Logger;
 @Mod("portalgun")
 public class PortalGun {
     // Definição do ID do mod para referencia em todo o codigo
-    public static final String MODID = "PortalGun";
+    public static final String MODID = "portalgun";
 
     // Referência direta para um logger SLF4J
     private static final Logger LOGGER = LogUtils.getLogger();
