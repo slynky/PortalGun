@@ -1,93 +1,24 @@
-# Este é um exemplo de arquivo mods.toml. Ele contém os dados relacionados ao carregamento de mods.
-# Existem vários campos obrigatórios (#obrigatório) e muitos outros opcionais (#opcional).
-# O formato geral segue o padrão TOML, versão 0.5.0.
-# Observe que há algumas listas TOML neste arquivo.
-# Para mais informações sobre o formato TOML, acesse: https://github.com/toml-lang/toml
+modLoader="javafml"
+loaderVersion="[50,)" # Forge 50.x é o indicado para Minecraft 1.21.4
+license="All Rights Reserved"
 
-# O nome do tipo de carregador de mods - para mods FML normais com @Mod, deve ser "javafml"
-modLoader="javafml" #obrigatório
+[[mods]]
+modId="portalgun"
+version="1.0.0"
+displayName="Portal Gun"
+authors="Slinky"
+description='''Mod de portalgun que eu compliquei bem mais que o necessário'''
 
-# Um intervalo de versões compatíveis com o carregador de mods - para mods FML normais com @Mod, será a versão do Forge
-loaderVersion="${loader_version_range}" #obrigatório. Normalmente é atualizado a cada nova versão do Minecraft pelo Forge. Veja nossa página de downloads para listas de versões.
-
-# A licença do seu mod. Esse é um metadado obrigatório e facilita a compreensão das regras de redistribuição.
-# Consulte suas opções em https://choosealicense.com/. "Todos os direitos reservados" é a configuração padrão de copyright.
-license="${mod_license}"
-
-# Um URL para relatar problemas com este mod
-#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #opcional
-
-# Se o seu mod for apenas para o cliente e não tiver funcionalidade para multiplayer (servidores dedicados ou jogo via LAN),
-# defina como "true" e o Forge ajustará corretamente o displayTest, ignorando o carregamento do mod em servidores dedicados.
-#clientSideOnly=true #opcional - o padrão é "false" se não especificado
-
-# Uma lista de mods - a quantidade permitida aqui depende do carregador de mods específico
-[[mods]] #obrigatório
-
-# O identificador único (modid) do mod
-modId="${PortalGun}" #obrigatório
-
-# A versão do mod
-version="${1.0.0}" #obrigatório
-
-# O nome exibido para o mod
-displayName="${Portal Gun}" #obrigatório
-
-# Um URL para verificar atualizações deste mod. Veja a especificação JSON em: https://docs.minecraftforge.net/en/latest/misc/updatechecker/
-#updateJSONURL="https://change.me.example.invalid/updates.json" #opcional
-
-# Um URL para a "homepage" do mod, exibido na interface dos mods
-#displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #opcional
-
-# O nome de um arquivo (localizado na raiz do JAR do mod) contendo um logotipo para exibição
-#logoFile="examplemod.png" #opcional
-
-# Um campo de texto exibido na interface dos mods
-#credits="" #opcional
-
-# Um campo de texto exibido na interface dos mods para os autores
-authors="${Slinky}" #opcional
-
-# Display Test controla a exibição do mod na tela de conexão do servidor.
-# MATCH_VERSION - Mostra um "X" vermelho se as versões do mod no cliente e no servidor forem diferentes (padrão para mods com cliente e servidor).
-# IGNORE_SERVER_VERSION - Ignora a versão do servidor se o mod estiver apenas no cliente.
-# IGNORE_ALL_VERSION - Ignora diferenças entre cliente e servidor (use apenas se o mod não tiver componentes no servidor).
-# NONE - Não define um display test, exigindo que o mod gerencie isso manualmente.
-# IMPORTANTE: isso NÃO define em quais ambientes (CLIENTE ou SERVIDOR DEDICADO) o mod será carregado. Ele será carregado onde for encontrado.
-#displayTest="MATCH_VERSION" # Se não for especificado, o padrão é MATCH_VERSION para clientSideOnly=false ou IGNORE_ALL_VERSION para clientSideOnly=true (#opcional)
-
-# A descrição do mod (suporta várias linhas) (#obrigatório)
-description='''${Mod de portalgun que eu compliquei bem mais que o necessario}'''
-
-# Uma dependência - use "." para indicar dependência de um mod específico. Dependências são opcionais.
-[[dependencies.${mod_id}]] #opcional
-
-# O identificador do mod de dependência
-modId="forge" #obrigatório
-
-# Esta dependência é obrigatória? Se não for, deve-se especificar a ordenação abaixo.
-mandatory=true #obrigatório
-
-# O intervalo de versões aceito para a dependência
-versionRange="${forge_version_range}" #obrigatório
-
-# Relação de ordem de carregamento - "BEFORE" (antes) ou "AFTER" (depois) são necessários se a dependência não for obrigatória.
+[[dependencies.portalgun]]
+modId="forge"
+mandatory=true
+versionRange="[50,)"
 ordering="NONE"
-
-# Define em qual lado essa dependência se aplica - BOTH (ambos), CLIENT (cliente) ou SERVER (servidor)
 side="BOTH"
 
-# Outra dependência
-[[dependencies.${mod_id}]]
+[[dependencies.portalgun]]
 modId="minecraft"
 mandatory=true
-
-# Esse intervalo de versão declara um mínimo da versão atual do Minecraft até, mas não incluindo, a próxima versão principal.
-versionRange="${minecraft_version_range}"
+versionRange="[1.21.4,1.22)"
 ordering="NONE"
 side="BOTH"
-
-# Recursos são propriedades específicas do ambiente do jogo que podem ser necessárias para o mod. Este exemplo declara
-# que o mod requer uma versão do OpenGL 3.2 ou superior. Outros recursos podem ser adicionados. Eles são independentes de lado (cliente/servidor).
-#[features.${mod_id}]
-#openGLVersion="[3.2,)"
