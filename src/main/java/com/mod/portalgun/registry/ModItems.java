@@ -1,17 +1,24 @@
 package com.mod.portalgun.registry;
 
 import com.mod.portalgun.PortalGun;
-import com.mod.portalgun.items.UraniumIngot;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
-    public static final DeferredRegister<Item> ITEMS =
-            DeferredRegister.create(ForgeRegistries.ITEMS, PortalGun.MODID);
 
-    public static final RegistryObject<Item> URANIUM_INGOT =
-            ITEMS.register("uranium_ingot", UraniumIngot::new);
+    public static final RegistryObject<Item> URANIUM_ITEM = PortalGun.ITEMS.register("uranium_ingot",
+            () -> new Item(new Item.Properties()
+                    .setId(PortalGun.ITEMS.key("uranium_ingot")))
+    );
+
+
+
+    public static void registrar(IEventBus bus) {
+        PortalGun.ITEMS.register(bus);
+    }
+
 }

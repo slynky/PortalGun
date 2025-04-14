@@ -33,13 +33,13 @@ import org.slf4j.Logger;
 // O valor aqui deve corresponder a uma entrada no arquivo META-INF/mods.toml
 @Mod("portalgun")
 public class PortalGun {
-    // Definição do ID do mod para referencia em todo o codigo
     public static final String MODID = "portalgun";
 
-    // Referência direta para um logger SLF4J
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public PortalGun() {
-        ModRegistries.registrarTudo(FMLJavaModLoadingContext.get().getModEventBus());
-    }
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
+
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
+
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 }

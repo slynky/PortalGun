@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 
 // Classe de configuração de exemplo. Não é obrigatória, mas ajuda a manter a configuração organizada.
 // Demonstra como usar as APIs de configuração do Forge.
-@Mod.EventBusSubscriber(modid = com.mod.portalgun.PortalGun.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = PortalGun.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Config {
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 
