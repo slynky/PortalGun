@@ -1,0 +1,77 @@
+[33mcommit fcaecafd02f6c36641a13105acd8fb011a985d74[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: slynky <kaua5.vs.melo@gmail.com>
+Date:   Thu Apr 17 20:03:40 2025 -0300
+
+    adicionei copperwire_block
+
+[33mcommit 3e434b612887ffb5648f075481e57598ba8770e9[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: slynky <kaua5.vs.melo@gmail.com>
+Date:   Mon Apr 14 21:13:23 2025 -0300
+
+    Refatoração 2.0, agora funciona
+
+[33mcommit f271d9607930e12355e987ab71f668e415f72014[m
+Author: slynky <kaua5.vs.melo@gmail.com>
+Date:   Mon Apr 14 19:57:55 2025 -0300
+
+    Refatoração completa
+
+[33mcommit 768ea5bdd9a8b1bae4daaa313bf09f44bf456bc4[m
+Author: slynky <kaua5.vs.melo@gmail.com>
+Date:   Wed Apr 9 19:36:15 2025 -0300
+
+    Correção MODID
+
+[33mcommit c34aeab4a4c38658d37f248da2580a175f139bc6[m
+Author: slynky <kaua5.vs.melo@gmail.com>
+Date:   Wed Apr 9 19:30:11 2025 -0300
+
+    Urânio Criado
+
+[33mcommit 54afa981022790a7041f3eae6aa43c1eb0866b87[m
+Author: slynky <kaua5.vs.melo@gmail.com>
+Date:   Wed Apr 9 19:25:10 2025 -0300
+
+    Criação de arquivos para registros e ajustes nos usos
+
+[33mcommit dae71b9e242be88267c162a1f4543a63128878f2[m
+Author: slynky <kaua5.vs.melo@gmail.com>
+Date:   Wed Apr 9 19:07:43 2025 -0300
+
+    @Mod ajustado
+
+[33mcommit abf7bbb69882e8b77cca2b8e819d7fbe440b0be3[m
+Author: slynky <kaua5.vs.melo@gmail.com>
+Date:   Wed Apr 9 19:06:16 2025 -0300
+
+    Build corrigida
+
+[33mcommit b251d67a6fb9751a8a058f4b5ab3e3684298b4f0[m
+Author: slynky <kaua5.vs.melo@gmail.com>
+Date:   Sat Apr 5 19:35:03 2025 -0300
+
+    ./gradlew genIntellijRuns executado
+
+[33mcommit dbf307b96f4a1e41754371a0305e5e0d09985848[m
+Author: slynky <kaua5.vs.melo@gmail.com>
+Date:   Fri Apr 4 14:01:03 2025 -0300
+
+    Começo da modelização de itens e seus registros
+
+[33mcommit 96f0e5e2c10cf27d626c98cddc7dd012d4d192ae[m
+Author: slynky <kaua5.vs.melo@gmail.com>
+Date:   Thu Apr 3 21:55:53 2025 -0300
+
+    Comentarios em pt-br e alterações no id do gradle.properties
+
+[33mcommit 8a0b68e8c7657ba28767e0d320689bc930f0df13[m
+Author: slynky <kaua5.vs.melo@gmail.com>
+Date:   Thu Apr 3 21:40:21 2025 -0300
+
+    projeto inicial
+
+[33mcommit 8ff4cde10eb9183cabac2396ac5c35ce3c74c353[m
+Author: slynky <kaua5.vs.melo@gmail.com>
+Date:   Thu Apr 3 21:39:20 2025 -0300
+
+    first commit

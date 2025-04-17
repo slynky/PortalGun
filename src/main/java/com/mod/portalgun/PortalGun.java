@@ -43,6 +43,14 @@ public class PortalGun {
                     .mapColor(MapColor.COLOR_LIGHT_GREEN)
             )
     );
+
+    public static final RegistryObject<Block> URANIUMORE_BLOCK = BLOCKS.register("uraniumore_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .setId(BLOCKS.key("uraniumore_block"))
+                    .mapColor(MapColor.COLOR_LIGHT_GREEN)
+            )
+    );
+
     public static final RegistryObject<Block> COPPERWIRE_BLOCK = BLOCKS.register("copperwire_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .setId(BLOCKS.key("copperwire_block"))
@@ -54,6 +62,10 @@ public class PortalGun {
             () -> new BlockItem(URANIUM_BLOCK.get(), new Item.Properties().setId(ITEMS.key("uranium_block")))
     );
 
+    public static final RegistryObject<Item> URANIUMORE_BLOCK_ITEM = ITEMS.register("uraniumore_block",
+            () -> new BlockItem(URANIUM_BLOCK.get(), new Item.Properties().setId(ITEMS.key("uraniumore_block")))
+    );
+
     public static final RegistryObject<Item> COPPERWIRE_BLOCK_ITEM = ITEMS.register("copperwire_block",
             () -> new BlockItem(URANIUM_BLOCK.get(), new Item.Properties().setId(ITEMS.key("copperwire_block")))
     );
@@ -61,6 +73,12 @@ public class PortalGun {
     public static final RegistryObject<Item>URANIUM_ITEM = ITEMS.register("uranium_item",
             () -> new Item(new Item.Properties()
                     .setId(ITEMS.key("uranium_item"))
+            )
+    );
+
+    public static final RegistryObject<Item>URANIUMORE_ITEM = ITEMS.register("uraniumore_item",
+            () -> new Item(new Item.Properties()
+                    .setId(ITEMS.key("uraniumore_item"))
             )
     );
 
