@@ -39,7 +39,13 @@ public class PortalGun {
 
     public static final RegistryObject<Block> URANIUM_BLOCK = BLOCKS.register("uranium_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .setId(BLOCKS.key("example_block"))
+                    .setId(BLOCKS.key("uranium_block"))
+                    .mapColor(MapColor.COLOR_LIGHT_GREEN)
+            )
+    );
+    public static final RegistryObject<Block> COPPERWIRE_BLOCK = BLOCKS.register("copperwire_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .setId(BLOCKS.key("copperwire_block"))
                     .mapColor(MapColor.COLOR_LIGHT_GREEN)
             )
     );
@@ -48,13 +54,17 @@ public class PortalGun {
             () -> new BlockItem(URANIUM_BLOCK.get(), new Item.Properties().setId(ITEMS.key("uranium_block")))
     );
 
+    public static final RegistryObject<Item> COPPERWIRE_BLOCK_ITEM = ITEMS.register("copperwire_block",
+            () -> new BlockItem(URANIUM_BLOCK.get(), new Item.Properties().setId(ITEMS.key("copperwire_block")))
+    );
+
     public static final RegistryObject<Item>URANIUM_ITEM = ITEMS.register("uranium_item",
             () -> new Item(new Item.Properties()
                     .setId(ITEMS.key("uranium_item"))
             )
     );
 
-    public static final RegistryObject<CreativeModeTab> PORTALGUN_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
+    public static final RegistryObject<CreativeModeTab> PORTALGUN_TAB = CREATIVE_MODE_TABS.register("Portal_Gun", () -> CreativeModeTab.builder()
             .withTabsBefore(CreativeModeTabs.INVENTORY)
             .icon(() -> URANIUM_ITEM.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
