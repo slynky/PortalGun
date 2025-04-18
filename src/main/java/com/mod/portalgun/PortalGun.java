@@ -3,7 +3,6 @@ package com.mod.portalgun;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -37,58 +36,143 @@ public class PortalGun {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
-    public static final RegistryObject<Block> URANIUM_BLOCK = BLOCKS.register("uranium_block",
-            () -> new Block(BlockBehaviour.Properties.of()
+
+    // REGISTROS DE BLOCOS
+    public static final RegistryObject<Block> URANIUM_BLOCK = BLOCKS.register("uranium_block", () ->
+            new Block(BlockBehaviour.Properties.of()
                     .setId(BLOCKS.key("uranium_block"))
                     .mapColor(MapColor.COLOR_LIGHT_GREEN)
             )
     );
 
-    public static final RegistryObject<Block> URANIUMORE_BLOCK = BLOCKS.register("uraniumore_block",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .setId(BLOCKS.key("uraniumore_block"))
+    public static final RegistryObject<Block> URANIUM_ORE_BLOCK = BLOCKS.register("uranium_ore_block", () ->
+            new Block(BlockBehaviour.Properties.of()
+                    .setId(BLOCKS.key("uranium_ore_block"))
                     .mapColor(MapColor.COLOR_LIGHT_GREEN)
             )
     );
 
-    public static final RegistryObject<Block> COPPERWIRE_BLOCK = BLOCKS.register("copperwire_block",
-            () -> new Block(BlockBehaviour.Properties.of()
+    public static final RegistryObject<Block> POLYMERSUBSTRATE_BLOCK = BLOCKS.register("polymersubstrate_block", () ->
+            new Block(BlockBehaviour.Properties.of()
+                    .setId(BLOCKS.key("polymersubstrate_block"))
+                    .mapColor(MapColor.COLOR_LIGHT_GRAY)
+            )
+    );
+
+    public static final RegistryObject<Block> COPPERWIRE_BLOCK = BLOCKS.register("copperwire_block", () ->
+            new Block(BlockBehaviour.Properties.of()
                     .setId(BLOCKS.key("copperwire_block"))
-                    .mapColor(MapColor.COLOR_LIGHT_GREEN)
+                    .mapColor(MapColor.COLOR_ORANGE)
             )
     );
 
+    // REGISTROS DE BLOCOS ITEMS
     public static final RegistryObject<Item> URANIUM_BLOCK_ITEM = ITEMS.register("uranium_block",
             () -> new BlockItem(URANIUM_BLOCK.get(), new Item.Properties().setId(ITEMS.key("uranium_block")))
     );
 
-    public static final RegistryObject<Item> URANIUMORE_BLOCK_ITEM = ITEMS.register("uraniumore_block",
-            () -> new BlockItem(URANIUM_BLOCK.get(), new Item.Properties().setId(ITEMS.key("uraniumore_block")))
+    public static final RegistryObject<Item> URANIUM_ORE_BLOCK_ITEM = ITEMS.register("uranium_ore_block",
+            () -> new BlockItem(URANIUM_ORE_BLOCK.get(), new Item.Properties().setId(ITEMS.key("uranium_ore_block")))
+    );
+
+    public static final RegistryObject<Item> POLYMERSUBSTRATE_BLOCK_ITEM = ITEMS.register("polymersubstrate_block",
+            () -> new BlockItem(POLYMERSUBSTRATE_BLOCK.get(), new Item.Properties().setId(ITEMS.key("polymersubstrate_block")))
     );
 
     public static final RegistryObject<Item> COPPERWIRE_BLOCK_ITEM = ITEMS.register("copperwire_block",
-            () -> new BlockItem(URANIUM_BLOCK.get(), new Item.Properties().setId(ITEMS.key("copperwire_block")))
+            () -> new BlockItem(COPPERWIRE_BLOCK.get(), new Item.Properties().setId(ITEMS.key("copperwire_block")))
     );
 
-    public static final RegistryObject<Item>URANIUM_ITEM = ITEMS.register("uranium_item",
-            () -> new Item(new Item.Properties()
-                    .setId(ITEMS.key("uranium_item"))
-            )
+
+    //REGISTROS DE ITEMS
+
+    public static final RegistryObject<Item> POLYMERSUBSTRATE_ITEM = ITEMS.register("polymersubstrate_item",
+            () -> new Item(new Item.Properties().setId(ITEMS.key("polymersubstrate_item")))
     );
 
-    public static final RegistryObject<Item>URANIUMORE_ITEM = ITEMS.register("uraniumore_item",
-            () -> new Item(new Item.Properties()
-                    .setId(ITEMS.key("uraniumore_item"))
-            )
+    public static final RegistryObject<Item> PORTALGUN_ITEM = ITEMS.register("portalgun_item",
+            () -> new Item(new Item.Properties().setId(ITEMS.key("portalgun_item")))
     );
 
-    public static final RegistryObject<CreativeModeTab> PORTALGUN_TAB = CREATIVE_MODE_TABS.register("Portal_Gun", () -> CreativeModeTab.builder()
-            .withTabsBefore(CreativeModeTabs.INVENTORY)
-            .icon(() -> URANIUM_ITEM.get().getDefaultInstance())
-            .displayItems((parameters, output) -> {
-                output.accept(URANIUM_ITEM.get());
-            }).build());
+    public static final RegistryObject<Item> COPPER_INGOT_ITEM = ITEMS.register("copper_ingot_block",
+            () -> new Item( new Item.Properties().setId(ITEMS.key("copper_ingot_block")))
+    );
 
+
+    public static final RegistryObject<Item> URANIUM_INGOT_ITEM = ITEMS.register("uranium_ingot_item",
+            () -> new Item(new Item.Properties().setId(ITEMS.key("uranium_ingot_item")))
+    );
+
+    public static final RegistryObject<Item> URANIUM_ORE_ITEM = ITEMS.register("uranium_ore_item",
+            () -> new Item(new Item.Properties().setId(ITEMS.key("uranium_ore_item")))
+    );
+
+    public static final RegistryObject<Item> PORTALGUNCORE_ITEM = ITEMS.register("portalguncore_item",
+            () -> new Item(new Item.Properties().setId(ITEMS.key("portalguncore_item")))
+    );
+
+    public static final RegistryObject<Item> PORTALGUNSHELL_ITEM = ITEMS.register("portalgunshell_item",
+            () -> new Item(new Item.Properties().setId(ITEMS.key("portalgunshell_item")))
+    );
+
+    public static final RegistryObject<Item> MAGNETICFIELDGEN_ITEM = ITEMS.register("magneticfieldgen_item",
+            () -> new Item(new Item.Properties().setId(ITEMS.key("magneticfieldgen_item")))
+    );
+
+    public static final RegistryObject<Item> GRAPHENECOIL_ITEM = ITEMS.register("graphenecoil_item",
+            () -> new Item(new Item.Properties().setId(ITEMS.key("graphenecoil_item")))
+    );
+
+    public static final RegistryObject<Item> TUNGESTEN_INGOT_ITEM = ITEMS.register("tungestencoating_item",
+            () -> new Item(new Item.Properties().setId(ITEMS.key("tungestencoating_item")))
+    );
+
+    public static final RegistryObject<Item> TUNGESTEN_ORE_ITEM = ITEMS.register("tungesten_ore_item",
+            () -> new Item(new Item.Properties().setId(ITEMS.key("tungesten_ore_item")))
+    );
+
+    public static final RegistryObject<Item> TUNGESTENCOATING_ITEM = ITEMS.register("tungestencoating_item",
+            () -> new Item(new Item.Properties().setId(ITEMS.key("tungestencoating_item")))
+    );
+
+
+
+
+    // REGISTROS DE ABAS DO CREATIVO
+    public static final RegistryObject<CreativeModeTab> PORTALGUN_TAB = CREATIVE_MODE_TABS.register("portal_gun", () ->
+            CreativeModeTab.builder()
+                    .withTabsBefore(CreativeModeTabs.INVENTORY)
+                    .icon(() -> PORTALGUN_ITEM.get().getDefaultInstance()) // ícone da aba
+                    .displayItems((parameters, output) -> {
+                        //relacionados portalgun
+                        output.accept(PORTALGUN_ITEM.get());
+                        output.accept(PORTALGUNCORE_ITEM.get());
+                        output.accept(PORTALGUNSHELL_ITEM.get());
+                        output.accept(MAGNETICFIELDGEN_ITEM.get());
+                        output.accept(GRAPHENECOIL_ITEM.get());
+                        //relacionados uranio
+                        output.accept(URANIUM_INGOT_ITEM.get());
+                        output.accept(URANIUM_ORE_ITEM.get());
+                        output.accept(URANIUM_ORE_BLOCK_ITEM.get()); // cuidado: esse item precisa estar registrado, senão dá erro
+                        output.accept(URANIUM_BLOCK_ITEM.get());     // idem acima
+                        //relacionados cobre
+                        output.accept(COPPER_INGOT_ITEM.get());
+                        output.accept(COPPERWIRE_BLOCK_ITEM.get());
+                        //relacionados tungestenio
+                        output.accept(TUNGESTEN_INGOT_ITEM.get());
+                        output.accept(TUNGESTEN_ORE_ITEM.get());
+                        output.accept(TUNGESTENCOATING_ITEM.get());
+                        //relacionados substrato de polimero
+                        output.accept(POLYMERSUBSTRATE_BLOCK_ITEM.get());
+                        output.accept(POLYMERSUBSTRATE_ITEM.get());
+                    })
+                    .build()
+    );
+
+
+
+
+    //Construtor do MOD
     public PortalGun(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
 
@@ -100,6 +184,9 @@ public class PortalGun {
         modEventBus.addListener(this::addCreative);
         context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
+
+
+
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         LOGGER.info("HELLO FROM COMMON SETUP");
