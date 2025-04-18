@@ -123,8 +123,8 @@ public class PortalGun {
             () -> new Item(new Item.Properties().setId(ITEMS.key("graphenecoil_item")))
     );
 
-    public static final RegistryObject<Item> TUNGESTEN_INGOT_ITEM = ITEMS.register("tungestencoating_item",
-            () -> new Item(new Item.Properties().setId(ITEMS.key("tungestencoating_item")))
+    public static final RegistryObject<Item> TUNGESTEN_INGOT_ITEM = ITEMS.register("tungesten_ingot_item",
+            () -> new Item(new Item.Properties().setId(ITEMS.key("tungesten_ingot_item")))
     );
 
     public static final RegistryObject<Item> TUNGESTEN_ORE_ITEM = ITEMS.register("tungesten_ore_item",
