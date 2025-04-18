@@ -66,6 +66,13 @@ public class PortalGun {
             )
     );
 
+    public static final RegistryObject<Block> RADIATIVEFUEL_BLOCK = BLOCKS.register("radiativefuel_block", () ->
+            new Block(BlockBehaviour.Properties.of()
+                    .setId(BLOCKS.key("radiativefuel_block"))
+                    .mapColor(MapColor.COLOR_RED)
+            )
+    );
+
     // REGISTROS DE BLOCOS ITEMS
     public static final RegistryObject<Item> URANIUM_BLOCK_ITEM = ITEMS.register("uranium_block",
             () -> new BlockItem(URANIUM_BLOCK.get(), new Item.Properties().setId(ITEMS.key("uranium_block")))
@@ -81,6 +88,10 @@ public class PortalGun {
 
     public static final RegistryObject<Item> COPPERWIRE_BLOCK_ITEM = ITEMS.register("copperwire_block",
             () -> new BlockItem(COPPERWIRE_BLOCK.get(), new Item.Properties().setId(ITEMS.key("copperwire_block")))
+    );
+
+    public static final RegistryObject<Item> RADIATIVEFUEL_BLOCK_ITEM = ITEMS.register("radiativefuel_block",
+            () -> new BlockItem(COPPERWIRE_BLOCK.get(), new Item.Properties().setId(ITEMS.key("radiativefuel_block")))
     );
 
 
@@ -135,6 +146,20 @@ public class PortalGun {
             () -> new Item(new Item.Properties().setId(ITEMS.key("tungestencoating_item")))
     );
 
+    public static final RegistryObject<Item> RADIATIVEFUEL_ITEM = ITEMS.register("radiativefuel_item",
+            () -> new Item(new Item.Properties().setId(ITEMS.key("radiativefuel_item")))
+    );
+
+    public static final RegistryObject<Item> HAMMER_ITEM = ITEMS.register("hammer_item",
+            () -> new Item(new Item.Properties().setId(ITEMS.key("hammer_item")))
+    );
+
+    public static final RegistryObject<Item> COMPRESSIONMACHINE_ITEM = ITEMS.register("compressionmachine_item",
+            () -> new Item(new Item.Properties().setId(ITEMS.key("compressionmachine_item")))
+    );
+
+
+
 
 
 
@@ -165,6 +190,13 @@ public class PortalGun {
                         //relacionados substrato de polimero
                         output.accept(POLYMERSUBSTRATE_BLOCK_ITEM.get());
                         output.accept(POLYMERSUBSTRATE_ITEM.get());
+                        //relacionados combustivel radioativo
+                        output.accept(RADIATIVEFUEL_BLOCK_ITEM.get());
+                        output.accept(RADIATIVEFUEL_ITEM.get());
+                        //martelo
+                        output.accept(HAMMER_ITEM.get());
+                        //Maquinas
+                        output.accept(COMPRESSIONMACHINE_ITEM.get());
                     })
                     .build()
     );
