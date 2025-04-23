@@ -1,0 +1,24 @@
+{
+  "item.portalgun.uranium_block": "Uranium Block",
+  "item.portalgun.uranium_ore_block": "Uranium Ore Block",
+  "item.portalgun.polymersubstrate_block": "Polymer Substrate Block",
+  "item.portalgun.copperwire_block": "Copper Wire Block",
+  "item.portalgun.radiativefuel_block": "Radiative Fuel Block",
+
+  "item.portalgun.polymersubstrate_item": "Polymer Substrate",
+  "item.portalgun.portalgun_item": "Portal Gun",
+  "item.portalgun.copper_ingot_item": "Copper Ingot",
+  "item.portalgun.uranium_ingot_item": "Uranium Ingot",
+  "item.portalgun.uranium_ore_item": "Uranium Ore",
+  "item.portalgun.portalguncore_item": "Portal Gun Core",
+  "item.portalgun.portalgunshell_item": "Portal Gun Shell",
+  "item.portalgun.magneticfieldgen_item": "Magnetic Field Generator",
+  "item.portalgun.graphenecoil_item": "Graphene Coil",
+  "item.portalgun.tungesten_ingot_item": "Tungsten Ingot",
+  "item.portalgun.tungesten_ore_item": "Tungsten Ore",
+  "item.portalgun.tungestencoating_item": "Tungsten Coating",
+  "item.portalgun.radiativefuel_item": "Radiative Fuel",
+
+  "item.portalgun.hammer_item": "Hammer",
+  "item.portalgun.compressionmachine_item": "Compression Machine"
+}
