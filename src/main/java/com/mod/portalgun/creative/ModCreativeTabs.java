@@ -1,6 +1,7 @@
 package com.mod.portalgun.creative;
 
 import com.mod.portalgun.PortalGun;
+import com.mod.portalgun.block.ModBlocks;
 import com.mod.portalgun.item.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
@@ -29,21 +30,21 @@ public class ModCreativeTabs {
 
                         output.accept(ModItems.URANIUM_INGOT_ITEM.get());
                         output.accept(ModItems.URANIUM_ORE_ITEM.get());
-                        output.accept(ModItems.URANIUM_ORE_BLOCK_ITEM.get());
-                        output.accept(ModItems.URANIUM_BLOCK_ITEM.get());
+                        output.accept(ModBlocks.URANIUM_ORE_BLOCK.get());
+                        output.accept(ModBlocks.URANIUM_ORE_BLOCK.get());
 
                         output.accept(ModItems.COPPER_INGOT_ITEM.get());
-                        output.accept(ModItems.COPPERWIRE_BLOCK_ITEM.get());
+                        output.accept(ModBlocks.COPPERWIRE_BLOCK.get());
 
                         output.accept(ModItems.TUNGESTEN_INGOT_ITEM.get());
                         output.accept(ModItems.TUNGESTEN_ORE_ITEM.get());
                         output.accept(ModItems.TUNGESTENCOATING_ITEM.get());
 
                         output.accept(ModItems.POLYMERSUBSTRATE_ITEM.get());
-                        output.accept(ModItems.POLYMERSUBSTRATE_BLOCK_ITEM.get());
+                        output.accept(ModBlocks.POLYMERSUBSTRATE_BLOCK.get());
 
                         output.accept(ModItems.RADIATIVEFUEL_ITEM.get());
-                        output.accept(ModItems.RADIATIVEFUEL_BLOCK_ITEM.get());
+                        output.accept(ModBlocks.RADIATIVEFUEL_BLOCK.get());
 
                         output.accept(ModItems.HAMMER_ITEM.get());
                         output.accept(ModItems.COMPRESSIONMACHINE_ITEM.get());

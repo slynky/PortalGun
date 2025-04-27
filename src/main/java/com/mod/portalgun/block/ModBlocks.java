@@ -1,6 +1,9 @@
 package com.mod.portalgun.block;
 
 import com.mod.portalgun.PortalGun;
+import com.mod.portalgun.item.ModItems;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
@@ -25,5 +28,9 @@ public class ModBlocks {
     private static RegistryObject<Block> registerBlock(String name, MapColor color) {
         return BLOCKS.register(name, () ->
                 new Block(BlockBehaviour.Properties.of().setId(BLOCKS.key(name)).mapColor(color)));
+    }
+
+    public static <T extends Block> void registrarBlockItem(String name, RegistryObject<T> block) {
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 }

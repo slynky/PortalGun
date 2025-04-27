@@ -14,14 +14,6 @@ public class ModItems {
 
 
 
-    // -------------------------
-    // ITENS DE BLOCO
-    // -------------------------
-    public static final RegistryObject<Item> URANIUM_BLOCK_ITEM = registerBlockItem("uranium_block", ModBlocks.URANIUM_BLOCK);
-    public static final RegistryObject<Item> URANIUM_ORE_BLOCK_ITEM = registerBlockItem("uranium_ore_block", ModBlocks.URANIUM_ORE_BLOCK);
-    public static final RegistryObject<Item> POLYMERSUBSTRATE_BLOCK_ITEM = registerBlockItem("polymersubstrate_block", ModBlocks.POLYMERSUBSTRATE_BLOCK);
-    public static final RegistryObject<Item> COPPERWIRE_BLOCK_ITEM = registerBlockItem("copperwire_block", ModBlocks.COPPERWIRE_BLOCK);
-    public static final RegistryObject<Item> RADIATIVEFUEL_BLOCK_ITEM = registerBlockItem("radiativefuel_block", ModBlocks.RADIATIVEFUEL_BLOCK);
 
     private static RegistryObject<Item> registerBlockItem(String name, RegistryObject<Block> bloco) {
         return ModItems.ITEMS.register(name, () -> new BlockItem(bloco.get(), new Item.Properties().setId(ModItems.ITEMS.key(name))));
